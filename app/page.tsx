@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HomePageClient from "./home/page";
 
-const siteUrl = "https://www.robertoarenas.com";
+const siteUrl = "https://www.homesbyroberto.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
