@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState, ChangeEvent, useRef } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+  ChangeEvent,
+  useRef,
+  FormEvent,
+} from "react";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import Image from "next/image";
