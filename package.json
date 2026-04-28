@@ -12,17 +12,15 @@
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
-  
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@opennextjs/cloudflare": "^1.19.4",
     "lucide-react": "^1.11.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
+    "@opennextjs/cloudflare": "^1.19.4",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -33,10 +31,5 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "wrangler": "^4.86.0"
-  },
-  "overrides": {
-    "@cloudflare/next-on-pages": {
-      "next": "$next"
-    }
   }
 }
