@@ -128,8 +128,9 @@ export default function HomePageClient() {
   const [fadeIn, setFadeIn] = useState(false);
   const [status, setStatus] = useState<Status>("");
 
-  const [activeNeighborhood, setActiveNeighborhood] =
-    useState<Neighborhood | null>(null);
+  const [activeNeighborhood, setActiveNeighborhood] = useState<Neighborhood>(
+    neighborhoods[0],
+  );
 
   const [formData, setFormData] = useState<FormDataState>(initialFormData);
 
@@ -190,10 +191,7 @@ export default function HomePageClient() {
     }
   };
 
-  const currentBg = useMemo(
-    () => activeNeighborhood?.bg ?? "/images/real-estate/suburban.jpg",
-    [activeNeighborhood],
-  );
+  const currentBg = useMemo(() => activeNeighborhood.bg, [activeNeighborhood]);
 
   return (
     <div className="w-full">
