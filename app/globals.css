@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --shadow-neonLight:
+    0 0 5px rgb(255 255 255 / 0.2), 0 0 20px rgb(255 255 255 / 0.5);
+  --shadow-neonLightSlim:
+    0 0 5px rgb(255 255 255 / 0.2), 0 0 8px rgb(255 255 255 / 0.5);
+  --shadow-neonDarkSlim: 0 0 5px rgb(0 0 0 / 0.2), 0 0 8px rgb(0 0 0 / 0.5);
+  --shadow-neonDark: 0 0 5px rgb(0 0 0 / 0.2), 0 0 20px rgb(0 0 0 / 0.5);
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+
+  /* this makes sure the padding and the border is included in the box sizing */
+  overflow-x: hidden;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* min-width: 100%; */
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base (light) */
+html {
+  background-color: #ffffff;
+  color: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode via Tailwind class strategy */
+html.dark {
+  background-color: #000000;
+  color: #fff;
 }
 
+/* Use min-height on the main wrapper to fill the viewport */
+#root,
+.main-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-width: 320px;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #fff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
