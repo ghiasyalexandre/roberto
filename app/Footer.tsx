@@ -69,7 +69,7 @@ export default function Footer() {
         <hr className="mt-2 border-neutral-700 dark:border-neutral-700" />
 
         <div className="xs:px-3 flex flex-col-reverse items-center bg-black px-2 py-2 pb-4 shadow-neonDarkSlim sm:flex-row sm:justify-between sm:px-4">
-          <p className="mt-2 text-sm text-neutral-500">
+          <p className="mt-2 text-xs sm:text-sm text-neutral-500 text-center">
             Copyright © 2026 Homes by Roberto - All Rights Reserved.
           </p>
 
@@ -86,7 +86,7 @@ export default function Footer() {
             <Link
               href="/contact"
               className="mx-2 text-sm text-neutral-500 transition-colors duration-300 hover:text-neutral-500 dark:hover:text-neutral-300"
-              aria-label="Contact Us"
+              aria-label="Roberto Arenas' Real Estate License credentials"
               draggable={false}
             >
               License
@@ -104,12 +104,21 @@ export default function Footer() {
             */}
 
             <Link
-              href="/faq"
+              href="/"
               className="mx-2 text-sm text-neutral-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
-              aria-label="Frequently Asked Questions"
+              aria-label="Facebook account of Roberto Arenas Rob.Realtyfl @Rob.Realtyfl"
               draggable={false}
             >
               Facebook
+            </Link>
+
+            <Link
+              href="/"
+              className="mx-2 text-sm text-neutral-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"
+              aria-label="Instagram account of Roberto Arenas Rob.Realtyfl @Rob.Realtyfl"
+              draggable={false}
+            >
+              Instagram
             </Link>
           </div>
         </div>

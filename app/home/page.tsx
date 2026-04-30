@@ -196,7 +196,7 @@ export default function HomePageClient() {
   return (
     <div className="w-full">
       <div
-        className={`relative flex h-screen md:h-[80vh] flex-col justify-center transition-colors duration-2000 ease-out ${
+        className={`relative flex h-screen  flex-col justify-center transition-colors duration-2000 ease-out ${
           fadeIn ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0"
         }`}
       >
@@ -260,14 +260,14 @@ export default function HomePageClient() {
         </div>
       </div>
 
-      <section className="px-6 py-16 text-center md:text-left lg:px-10 lg:py-24">
+      <section className="px-6 pt-16 text-center md:text-left lg:px-10 lg:pt-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 md:grid-cols-2">
           <div
             className={`my-auto flex flex-col transition-all duration-1000 ease-out ${
               fadeIn ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
-            <p className="mb-3 text-xs font-semibold! uppercase tracking-[0.3em] dark:font-normal sm:text-base lg:text-lg">
+            <p className="mb-3 text-sm font-semibold! uppercase tracking-[0.3em] dark:font-normal sm:text-base lg:text-lg">
               Roberto Arenas
             </p>
             <h2 className="mb-5 text-2xl font-bold sm:text-3xl md:text-4xl">
@@ -310,7 +310,7 @@ export default function HomePageClient() {
 
       <section
         aria-labelledby="services"
-        className="px-6 pb-14 text-center md:text-left lg:px-10 lg:pb-20"
+        className="px-6 py-14 text-center md:text-left lg:px-10 lg:py-20"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 max-w-3xl">
@@ -365,7 +365,7 @@ export default function HomePageClient() {
       </section>
       <section
         aria-labelledby="neighborhoods"
-        className="px-6 pb-16 lg:px-10 lg:pb-24"
+        className="px-6 py-7 lg:px-10 lg:py-14"
       >
         <div className="mx-auto max-w-7xl overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -377,7 +377,7 @@ export default function HomePageClient() {
               <div className="absolute inset-0 bg-black/45" />
 
               <div className="relative z-10">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-200 sm:text-base lg:text-lg">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-neutral-200 sm:text-base lg:text-lg">
                   Area Expertise
                 </p>
 
@@ -425,7 +425,7 @@ export default function HomePageClient() {
 
       <section
         aria-labelledby="home-contact"
-        className="px-6 pb-14 lg:px-10 lg:pb-20"
+        className="px-6 py-7 lg:px-10 lg:py-14"
       >
         <div className="mx-auto max-w-7xl">
           <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white/95 shadow-neonDark dark:border-neutral-800 dark:bg-neutral-950/95 dark:shadow-neonLightSlim">
@@ -465,7 +465,7 @@ export default function HomePageClient() {
                       (407) 615-9443
                     </p>
                     <p className="text-sm text-black dark:text-white">
-                      Homes@RobertoArenas
+                      Homes@RobertoArenas.com
                     </p>
                   </div>
                 </div>
@@ -596,12 +596,12 @@ export default function HomePageClient() {
 
       <section
         aria-labelledby="contact"
-        className="bg-white pt-4 transition-all duration-500 ease-in-out dark:bg-transparent dark:bg-linear-to-br dark:from-white/15 dark:via-transparent lg:pt-12"
+        className="bg-white transition-all duration-500 ease-in-out dark:bg-transparent dark:bg-linear-to-br dark:from-white/15 dark:via-transparent  px-8 py-8 lg:px-12 lg:py-12"
       >
-        <div className="container mx-auto max-w-7xl rounded-xl px-8 py-8 lg:px-12 lg:py-12">
+        <div className="container mx-auto max-w-7xl rounded-xl">
           <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
-            <div className="flex flex-col justify-center lg:justify-start">
-              <p className="mb-3 text-center text-xs font-bold uppercase tracking-[0.3em] text-neutral-700 dark:text-neutral-300  sm:text-base lg:text-lg lg:text-left">
+            <div className="flex flex-col justify-center lg:justify-between">
+              <p className="mb-3 text-center text-sm font-bold uppercase tracking-[0.3em] text-neutral-700 dark:text-neutral-300  sm:text-base lg:text-lg lg:text-left">
                 Orlando / Kissimmee
               </p>
 
@@ -629,11 +629,11 @@ export default function HomePageClient() {
 
               <div className="flex justify-center lg:justify-start">
                 <Link
-                  href="/contact"
-                  aria-label="Contact Realtor"
+                  href="/listings"
+                  aria-label="Home Listings for Sale or Buy by Roberto Arenas Reality"
                   className="inline-block min-w-32 rounded-md border-2 border-black bg-white px-5 py-3 text-center font-semibold text-neutral-500 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-black hover:text-white hover:shadow-md hover:shadow-white/50 dark:border-white dark:bg-black dark:font-normal dark:text-white dark:hover:border-neutral-500 dark:hover:bg-white dark:hover:text-neutral-700 dark:hover:shadow-black/50"
                 >
-                  Contact Me
+                  View Listings
                 </Link>
               </div>
             </div>
@@ -653,7 +653,7 @@ export default function HomePageClient() {
           </div>
         </div>
 
-        <hr className="mx-4 mt-4 border-neutral-300 dark:border-neutral-800 lg:mt-20" />
+        <hr className="mx-4 mt-4 border-neutral-300 dark:border-neutral-800 lg:mt-14" />
       </section>
     </div>
   );
